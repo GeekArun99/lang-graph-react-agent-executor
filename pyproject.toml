@@ -7,7 +7,9 @@ authors = [
     { name = "bhl-arunpujari", email = "arun.pujari@basichomeloan.com" }
 ]
 requires-python = ">=3.12"
-dependencies = []
+dependencies = [
+    "langchain-tavily>=0.2.18",
+]
 
 [project.scripts]
 langgraph = "langgraph:main"
@@ -16,3 +18,5 @@ langgraph = "langgraph:main"
 requires = ["uv_build>=0.12.5,<0.13.0"]
 build-backend = "uv_build"
 
+[tool.uv]
+package = false

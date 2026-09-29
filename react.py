@@ -15,3 +15,5 @@ def triple(num: float) -> float:
 
 tools = [TavilySearch(max_results= 1), triple]
 
+
+llm = ChatGroq(model = "llama-3.1-8b-instant", temperature=0).bind_tools(tools)

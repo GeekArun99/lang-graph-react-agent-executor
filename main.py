@@ -88,11 +88,11 @@ def main() -> None:
     app = build_graph()
     draw_graph(app)
 
-    initial_input = {"messages": [HumanMessage(content="Hello! How can you help me?")]}
+    initial_input = {"messages": [HumanMessage(content="What is the current temperature raibag right now..? List it and triple it.")]}
 
     try:
         result = app.invoke(initial_input)
-        logger.info(f"Final state: {result}")
+        logger.info(f"Final state: {result["messages"][LAST].content}")
     except Exception as e:
         logger.exception(f"Error during graph execution: {e}")
 

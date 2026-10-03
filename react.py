@@ -14,7 +14,7 @@ logger = logging.getLogger(__name__)
 
 
 class AgentConfig:
-    MODEL_NAME = "llama-3.1-8b-instant"
+    MODEL_NAME = "openai/gpt-oss-20b"
     TEMPERATURE = 0
     MAX_SEARCH_RESULTS = 1
     MAX_RETRIES = 3
